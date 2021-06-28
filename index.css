@@ -1,0 +1,305 @@
+#board {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(245,247,250, 0);
+}
+.card {
+  background-color: transparent;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  width: 18.8em;
+  height: 28em;
+  border-radius: 1%;
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
+  border-radius: 5%;
+}
+
+.card-front, .card-back {
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  
+  border-radius: 5%;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.1);
+  /*transition: 0.3s;*/
+}
+.card-front {
+  background-color: #e4cb93; /* fallback if image is missing */
+  color: #e4cb93;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card-back {
+  background-color: #333333;
+  color: #333333;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotateY(180deg);
+}
+
+.projectImage {
+  position: relative;
+  display: inline-block;
+  height: 39%;
+  width:94%;
+  top: 4%;
+  left: 0.5em;
+  
+ /*border-style:solid;*/
+  border-radius:1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  /* fade border */
+  mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 40%, transparent 70%);
+  
+}
+
+#text-title {
+  position: relative;
+  display: inline-block;
+  float: left;
+  
+  top: 3%;
+  left: 8%;
+  
+  font-weight: bold;
+  font-size:1.5em;
+  color: black;
+}
+#text-goal {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  
+  width: 100%;
+  left: 0%;
+  top: 8%;
+  
+  font-weight: bold;
+  font-size:1.5em;
+  color: lime;
+   text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
+#text-pagenum {
+  position: relative;
+  display: inline-block;
+  float: right;
+  
+  right:6.5%;
+  top: 1%;
+  font-size:2em;
+  
+  color:white;
+}
+#text-description {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  
+  top: 12%;
+  left: 0%;
+  width: 80%;
+  height: 30%;
+  
+  color: black;
+  font-size:140%;
+}
+#text-actual {
+  
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  
+  top: 40%;
+  left: 0%;
+  width: 80%;
+  height: 30%;
+  
+  color: black;
+  font-size:140%;
+  font-weight: bold;
+  font-size:1.5em;
+  color: lime;
+   text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
+.text-actualNum {
+  
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  
+  top: 15%;
+  left: 0%;
+  width: 80%;
+  height: 30%;
+  
+  color: black;
+  font-size:140%;
+  font-weight: bold;
+  font-size:2.5em;
+  color: lime;
+   text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+  
+  
+  content: counter(count);
+  animation: counter 5s linear infinite alternate;
+  counter-reset: count 0;
+}
+#text-actualRatingFail {
+  
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  
+  top: 40%;
+  left: 0%;
+  width: 80%;
+  height: 30%;
+  
+  color: red;
+  font-size:140%;
+  font-weight: bold;
+  font-size:1.5em;
+  color: lime;
+   text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
+#text-actualRatingSuccess {
+  
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  
+  top: 40%;
+  left: 0%;
+  width: 80%;
+  height: 30%;
+  
+  color: green;
+  font-size:140%;
+  font-weight: bold;
+  font-size:1.5em;
+  color: lime;
+   text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
+
+#text_footer {
+  color: black;
+}
+#footer {
+  position: absolute;
+  top: 95%;
+  width: 95%;
+  height: 4em;
+  background-color: gold;
+  text-align: center;
+  padding: 0.5em;
+  
+}
+#instructions {
+   pointer-events: none;
+}
+#success {
+  position: absolute;
+  top: -25%;
+  left: 30%;
+  width: 110%;
+  height: 150%;
+  background-color: lime;
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 40%, transparent 70%);
+  
+  transition: transform 0.8s;
+  
+  opacity: 0;
+}
+#success-img {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  color: white;
+  font-size:140%;
+  font-weight: bold;
+  font-size:2.5em;
+}
+#success-text {
+  position: absolute;
+  top: 53%;
+  left: 47%;
+  color: white;
+  font-size:140%;
+  font-weight: bold;
+  font-size:2.5em;
+}
+
+#fail {
+  position: absolute;
+  top: -25%;
+  left: -30%;
+  width: 110%;
+  height: 150%;
+  background-color: red;
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 40%, transparent 70%);
+  
+  transition: transform 0.8s;
+  
+  opacity: 0;
+}
+#fail-img {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  color: white;
+  font-size:140%;
+  font-weight: bold;
+  font-size:2.5em;
+}
+#fail-text {
+  position: absolute;
+  top: 53%;
+  left: 49.2%;
+  color: white;
+  font-size:140%;
+  font-weight: bold;
+  font-size:2.5em;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  margin-top: -3.5em;
+  left: 50%;
+  margin-left: -12.5em;
+  width:25em;
+  height:7em;
+  
+  background-color:#333333cc;
+  padding:1em 1em 2em 1em;
+  border-radius:1em;
+  perspective: 1001px;
+}
+.text_infobox {
+  color: white;
+  text-align: center;
+}
+#box_final {
+  display: none;
+}
