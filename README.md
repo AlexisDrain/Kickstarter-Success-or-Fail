@@ -1,2 +1,2 @@
 # Kickstarter-Success-or-Fail
-[Kickstarter-Success-or-Fail.github.io](Kickstarter-Success-or-Fail.github.io)
+[https://jessedrain.github.io/Kickstarter-Success-or-Fail/](https://jessedrain.github.io/Kickstarter-Success-or-Fail/)
