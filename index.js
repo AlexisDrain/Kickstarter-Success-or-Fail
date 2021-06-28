@@ -42,22 +42,23 @@ https://www.kickstarter.com/projects/1316011250/kisa
         class Carousel {
 
             constructor(element) {
-                
+                this.dynamicText = {
+                  end_text: "You got ?/10 correct choices. Nice try!<br><br>*Click anywhere to restart*"
+                }
                 this.resources = {
                   
-                  end_text: "You got ?/10 correct choices. Nice try!<br><br>*Click anywhere to restart*",
-                  cardfront_img: "url('https://habibtac.com/wp-content/uploads/2021/03/ks-card1.png')",
-                  cardback_img: "url('https://habibtac.com/wp-content/uploads/2021/06/cardback.png')",
-                  card1_img: "url('https://habibtac.com/wp-content/uploads/2021/01/myhitch2.png')",
-                  card2_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0002.png')",
-                  card3_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0001.png')",
-                  card4_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0003.png')",
-                  card5_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0004.png')",
-                  card6_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0005.png')",
-                  card7_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0008.png')",
-                  card8_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0006.png')",
-                  card9_img: "url('https://habibtac.com/wp-content/uploads/2021/06/ks-card-0007.png')",
-                  card10_img: "url('https://habibtac.com/wp-content/uploads/2021/06/Sprite-00010.png')"
+                  cardfront_img: "url(images/ks-card1.png)",
+                  cardback_img: "url(images/cardback.png)",
+                  card1_img: "url(images/card-images-518-321/ks-card-myhitch2.png)",
+                  card2_img: "url(images/card-images-518-321/ks-card-0002.png)",
+                  card3_img: "url(images/card-images-518-321/ks-card-0001.png)",
+                  card4_img: "url(images/card-images-518-321/ks-card-0003.png)",
+                  card5_img: "url(images/card-images-518-321/ks-card-0004.png)",
+                  card6_img: "url(images/card-images-518-321/ks-card-0005.png)",
+                  card7_img: "url(images/card-images-518-321/ks-card-0008.png)",
+                  card8_img: "url(images/card-images-518-321/ks-card-0006.png)",
+                  card9_img: "url(images/card-images-518-321/ks-card-0007.png)",
+                  card10_img: "url(images/card-images-518-321/Sprite-00010.png)"
                 }
                 this.playerchoices = "";
                 this.currentlevel = 1;
