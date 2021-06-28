@@ -49,7 +49,7 @@ https://www.kickstarter.com/projects/1316011250/kisa
                   
                   cardfront_img: "url(images/ks-card1.png)",
                   cardback_img: "url(images/cardback.png)",
-                  card1_img: "url(images/card-images-518-321/ks-card-myhitch2.png)",
+                  card1_img: "url(images/card-images-518-321/ks-card-myhitch2.PNG)",
                   card2_img: "url(images/card-images-518-321/ks-card-0002.png)",
                   card3_img: "url(images/card-images-518-321/ks-card-0001.png)",
                   card4_img: "url(images/card-images-518-321/ks-card-0003.png)",
